@@ -42,11 +42,11 @@ define( 'DB_CHARSET', 'utf8mb4' );
 define( 'DB_COLLATE', 'utf8mb4_unicode_ci' );
 
 // dynamically change url per environment
-define('WP_HOME','http://' . $_SERVER['HTTP_HOST']);
+/*define('WP_HOME','http://' . $_SERVER['HTTP_HOST']);
 define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST']);
 define('WP_CONTENT_URL', '/wp-content');
 define('DOMAIN_CURRENT_SITE', $_SERVER['HTTP_HOST']);
-
+*/
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', dirname( __FILE__ ) . '/' );
