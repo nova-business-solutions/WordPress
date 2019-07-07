@@ -21,14 +21,20 @@
 // Support multiple environments
 // set the config file based on current environment
 if (strpos(getenv('WP_ENV'),'stage')) !== false) {
-    //$config_file = 'azure-config/wp-config.azure.stage.php';
-    echo "Test";
+    $config_file = 'azure-config/wp-config.azure.stage.php';
 }
 
 elseif (strpos(getenv('WP_ENV'),'prod')) !== false) {
-    //$config_file = 'azure-config/wp-config.azure.prod.php';
-    echo "Test";
+    $config_file = 'azure-config/wp-config.azure.prod.php';
 }
+
+$path = dirname (__FILE__) . '/';
+if (file_exists($path . $config_file)) {
+    // include the config file if it exists
+    require_once $path . $config_file;
+}
+
+
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
 
