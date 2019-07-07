@@ -21,11 +21,13 @@
 // Support multiple environments
 // set the config file based on current environment
 if (strpos(getenv('WP_ENV'),'stage')) !== false) {
-    $config_file = 'azure-config/wp-config.azure.stage.php'
+    $config_file = 'azure-config/wp-config.azure.stage.php';
+    echo "Test";
 }
 
 elseif (strpos(getenv('WP_ENV'),'prod')) !== false) {
-    $config_file = 'azure-config/wp-config.azure.prod.php'
+    $config_file = 'azure-config/wp-config.azure.prod.php';
+    echo "Test";
 }
 
 
