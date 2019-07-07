@@ -18,6 +18,25 @@
  * @package WordPress
  */
 
+//define( 'DB_NAME', getenv ('DB_NAME') );
+define( 'DB_NAME', 'dbcondorwordpress');
+
+/** MySQL database username */
+//define( 'DB_USER', getenv ('DB_USER') );
+define( 'DB_USER', 'condorwordpressuser@mariadb-webclientes' );
+
+/** MySQL database password */
+//define( 'DB_PASSWORD', getenv ('DB_PASSWORD') );
+define( 'DB_PASSWORD', 'yGT1s15h3Fk4' );
+
+/** MySQL hostname */
+//define( 'DB_HOST', getenv ('DB_HOST') );
+define( 'DB_HOST', 'mariadb-webclientes.mariadb.database.azure.com' );
+
+
+
+
+
 // Support multiple environments
 // set the config file based on current environment
 if (strpos(getenv('WP_ENV'),'stage')) !== false) {
@@ -31,7 +50,7 @@ elseif (strpos(getenv('WP_ENV'),'prod')) !== false) {
 $path = dirname (__FILE__) . '/';
 //if (file_exists($path . $config_file)) {
     // include the config file if it exists
-    require_once $path . $config_file;
+ //   require_once $path . $config_file;
 //}
 
 
