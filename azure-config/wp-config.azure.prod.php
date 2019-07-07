@@ -25,7 +25,7 @@ define( 'DB_NAME', 'dbcondorwordpress');
 
 /** MySQL database username */
 //define( 'DB_USER', getenv ('DB_USER') );
-define( 'DB_USER', 'condorwordpressuser@mariadb-webclientes';
+define( 'DB_USER', 'condorwordpressuser@mariadb-webclientes' );
 
 /** MySQL database password */
 //define( 'DB_PASSWORD', getenv ('DB_PASSWORD') );
@@ -46,14 +46,15 @@ define( 'DB_HOST', 'mariadb-webclientes.mariadb.database.azure.com' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'put your unique phrase here' );
-define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
-define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
-define( 'NONCE_KEY',        'put your unique phrase here' );
-define( 'AUTH_SALT',        'put your unique phrase here' );
-define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
-define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
-define( 'NONCE_SALT',       'put your unique phrase here' );
+define( 'AUTH_KEY',         'L HKV1;uy1h#YK}h_d8Wr)X_@/6t{|-mkhJ&tm(gZ/e.%6]m:;0<6>g7-Jg>&TwO' );
+define( 'SECURE_AUTH_KEY',  '(5x}T(Ie{} U]>Ec-%kOrMuz>P]/f*4!M@n(Kp!vdn25XF2Su2>Tt@+E2uE~`S%1' );
+define( 'LOGGED_IN_KEY',    '$sc`;./G2#@KZl.+mhzIkk~DNQ%9KNFxx^/R}V5*;<s*Pj~3^Cv&J^wqdq^+ae2@' );
+define( 'NONCE_KEY',        ')FX;6gA>[,<Zm]TZb.a}m#;Sjy~uah;VL& Qwuf7{V7VF|)+OqD0[dL_B4m==55k' );
+define( 'AUTH_SALT',        '5zpog!&JyIfyIOWY9K=ZIu=>MkBzvR9%B)bI.lxb(av4iY;N N9!2L|qo->w?%hB' );
+define( 'SECURE_AUTH_SALT', '$`l.>)i 3WeGl4iG1q2f^Uoyzq,S|7P,]PMm<[r0Vjo=p+w/WAD4^vMwNOjcYe61' );
+define( 'LOGGED_IN_SALT',   '|aN!{=[5+mSy]vB^PjuXZy|DE{%Cm[KVkG[wkMM%F;<p(wSbyr8WMCqriJUAZXwh' );
+define( 'NONCE_SALT',       '-xiBV0akI75e8614  qsV!eVgJZaA58[PJS!im#-N1Kq>,>XEv9*4eIk?^/vv!c_' );
+
 
 /**#@-*/
 
@@ -84,7 +85,3 @@ define('WP_DEBUG_DISPLAY', getenv ('WP_DEBUG_DISPLAY'));
 /* That's all, stop editing! Happy publishing. */
 
 
-
-
-
-?>
