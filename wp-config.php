@@ -34,7 +34,10 @@ define( 'DB_PASSWORD', getenv ('DB_PASSWORD') );
 define( 'DB_HOST', getenv ('DB_HOST') );
 //define( 'DB_HOST', 'mariadb-webclientes.mariadb.database.azure.com' );
 
-
+if (strpos(getenv('WP_ENV'),'prod')) !== false) {
+    echo "prod!!!!!!!!!!!!!!!";
+  //  $config_file = 'azure-config/wp-config.azure.stage.php';
+}
 
 
 /** Database Charset to use in creating database tables. */
