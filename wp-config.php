@@ -29,10 +29,10 @@ elseif (strpos(getenv('WP_ENV'),'prod')) !== false) {
 }
 
 $path = dirname (__FILE__) . '/';
-if (file_exists($path . $config_file)) {
+//if (file_exists($path . $config_file)) {
     // include the config file if it exists
     require_once $path . $config_file;
-}
+//}
 
 
 /** Database Charset to use in creating database tables. */
