@@ -19,17 +19,23 @@
  */
 
 // ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define( 'DB_NAME', 'dbcondorwordpress' );
+//define( 'DB_NAME', getenv ('DB_NAME') );
+define( 'DB_NAME', 'dbcondorwordpress');
 
 /** MySQL database username */
+//define( 'DB_USER', getenv ('DB_USER') );
 define( 'DB_USER', 'condorwordpressuser@mariadb-webclientes' );
 
 /** MySQL database password */
+//define( 'DB_PASSWORD', getenv ('DB_PASSWORD') );
 define( 'DB_PASSWORD', 'yGT1s15h3Fk4' );
 
 /** MySQL hostname */
+//define( 'DB_HOST', getenv ('DB_HOST') );
 define( 'DB_HOST', 'mariadb-webclientes.mariadb.database.azure.com' );
+
+
+
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
