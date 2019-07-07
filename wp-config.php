@@ -17,24 +17,17 @@
  *
  * @package WordPress
  */
-
-//define( 'DB_NAME', getenv ('DB_NAME') );
-define( 'DB_NAME', 'dbcondorwordpress');
+/** The name of the database for WordPress */
+define( 'DB_NAME', getenv ('DB_NAME') );
 
 /** MySQL database username */
-//define( 'DB_USER', getenv ('DB_USER') );
-define( 'DB_USER', 'condorwordpressuser@mariadb-webclientes' );
+define( 'DB_USER', getenv ('DB_USER') );
 
 /** MySQL database password */
-//define( 'DB_PASSWORD', getenv ('DB_PASSWORD') );
-define( 'DB_PASSWORD', 'yGT1s15h3Fk4' );
+define( 'DB_PASSWORD', getenv ('DB_PASSWORD') );
 
 /** MySQL hostname */
-//define( 'DB_HOST', getenv ('DB_HOST') );
-define( 'DB_HOST', 'mariadb-webclientes.mariadb.database.azure.com' );
-
-
-
+define( 'DB_HOST', getenv ('DB_HOST') );
 
 
 // Support multiple environments
@@ -48,10 +41,10 @@ elseif ((strpos(getenv('WP_ENV'),'prod')) !== false) {
 }
 
 $path = dirname (__FILE__) . '/';
-//if (file_exists($path . $config_file)) {
+if (file_exists($path . $config_file)) {
     // include the config file if it exists
- //   require_once $path . $config_file;
-//}
+    require_once $path . $config_file;
+}
 
 
 /** Database Charset to use in creating database tables. */
@@ -61,11 +54,11 @@ define( 'DB_CHARSET', 'utf8mb4' );
 define( 'DB_COLLATE', 'utf8mb4_unicode_ci' );
 
 // dynamically change url per environment
-/*define('WP_HOME','http://' . $_SERVER['HTTP_HOST']);
+define('WP_HOME','http://' . $_SERVER['HTTP_HOST']);
 define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST']);
 define('WP_CONTENT_URL', '/wp-content');
 define('DOMAIN_CURRENT_SITE', $_SERVER['HTTP_HOST']);
-*/
+
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', dirname( __FILE__ ) . '/' );
@@ -74,3 +67,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 /** Sets up WordPress vars and included files. */
 require_once( ABSPATH . 'wp-settings.php' );
 
+?>
