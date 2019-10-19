@@ -151,7 +151,7 @@ abstract class WP_Privacy_Requests_Table extends WP_List_Table {
 
 		$current_link_attributes = empty( $current_status ) ? ' class="current" aria-current="page"' : '';
 		$status_label            = sprintf(
-			/* translators: %s: all requests count */
+			/* translators: %s: Number of requests. */
 			_nx(
 				'All <span class="count">(%s)</span>',
 				'All <span class="count">(%s)</span>',
@@ -235,9 +235,9 @@ abstract class WP_Privacy_Requests_Table extends WP_List_Table {
 				add_settings_error(
 					'bulk_action',
 					'bulk_action',
-					/* translators: %d: number of requests */
+					/* translators: %d: Number of requests. */
 					sprintf( _n( 'Deleted %d request', 'Deleted %d requests', $count ), $count ),
-					'updated'
+					'success'
 				);
 				break;
 			case 'resend':
@@ -252,9 +252,9 @@ abstract class WP_Privacy_Requests_Table extends WP_List_Table {
 				add_settings_error(
 					'bulk_action',
 					'bulk_action',
-					/* translators: %d: number of requests */
+					/* translators: %d: Number of requests. */
 					sprintf( _n( 'Re-sent %d request', 'Re-sent %d requests', $count ), $count ),
-					'updated'
+					'success'
 				);
 				break;
 		}
@@ -267,8 +267,6 @@ abstract class WP_Privacy_Requests_Table extends WP_List_Table {
 	 * @since 5.1.0 Added support for column sorting.
 	 */
 	public function prepare_items() {
-		global $wpdb;
-
 		$this->items    = array();
 		$posts_per_page = $this->get_items_per_page( $this->request_type . '_requests_per_page' );
 		$args           = array(
@@ -380,7 +378,7 @@ abstract class WP_Privacy_Requests_Table extends WP_List_Table {
 		$time_diff = time() - $timestamp;
 
 		if ( $time_diff >= 0 && $time_diff < DAY_IN_SECONDS ) {
-			/* translators: human readable timestamp */
+			/* translators: %s: Human-readable time difference. */
 			return sprintf( __( '%s ago' ), human_time_diff( $timestamp ) );
 		}
 
